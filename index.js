@@ -11,7 +11,7 @@ var app = express();
 app.get('/:mob', (req, res) => {
   //var body = _.pick(req.body, ['mob']);
 
-  console.log(req.params.mob);
+//  console.log(req.params.mob);
 
 var client = require('twilio')(accountSid, authToken);
 client.messages.create({
@@ -27,5 +27,5 @@ res.send();
 
 
 app.listen(port, () => {
-  console.log(`Started up at port ${port}`);
+//  console.log(`Started up at port ${port}`);
 });
