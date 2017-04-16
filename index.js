@@ -25,11 +25,9 @@ client.messages.create({
     body: "Test"
 }, function(err, message) {
   //  console.log(message.sid);
-  if(err){
-    res.status(400).send("Error");
-  }
+
 });
-res.send("200");
+
 });
 
 
