@@ -20,12 +20,15 @@ client.messages.create({
     body: "Test",
 }, function(err, message) {
   //  console.log(message.sid);
+  if(err){
+    res.send(400);
+  }
 });
-res.send();
+res.send(200);
 });
 
 
 
 app.listen(port, () => {
-//  console.log(`Started up at port ${port}`);
+  console.log(`Started up at port ${port}`);
 });
