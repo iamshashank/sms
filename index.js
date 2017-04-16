@@ -25,7 +25,10 @@ client.messages.create({
     body: "Test"
 }, function(err, message) {
   //  console.log(message.sid);
-
+  if(err){
+    return res.status(400).send(err);
+  }
+  return res.send("Success");
 });
 
 });
