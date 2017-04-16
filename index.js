@@ -17,7 +17,7 @@ var client = require('twilio')(accountSid, authToken);
 client.messages.create({
     to: req.params.mob,
     from: "+16182055802",
-    body: "Test",
+    body: "Test"
 }, function(err, message) {
   //  console.log(message.sid);
   if(err){
