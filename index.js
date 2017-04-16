@@ -8,6 +8,11 @@ var authToken = '50dc8a6c16592e48c1c22d33c4268acc';
 
 //require the Twilio module and create a REST client
 var app = express();
+
+
+app.get('/',(req,res)=>{
+  res.status(200).send("Done");
+});
 app.get('/:mob', (req, res) => {
   //var body = _.pick(req.body, ['mob']);
 
@@ -21,10 +26,10 @@ client.messages.create({
 }, function(err, message) {
   //  console.log(message.sid);
   if(err){
-    res.send(400);
+    res.status(400).send("Error");
   }
 });
-res.send(200);
+res.send("200");
 });
 
 
